@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./vue.js"></script>
+
+</head>
+<body>
+
+<div id="as">
+    <h1></h1>
+    <div v-on:click="handaaa()">{{w1}}</div>
+    <div title="this is ">aaa</div>
+    <div :title="w2">A</div>
+    <input v-model="w2">
+    <div>{{w2}}</div>
+
+
+<input v-model="inputword">
+    <button v-on:click="inputlist">dianwo</button>
+    <div>{{inputword}}</div>
+    <ul>
+        <ol v-for="item of list">{{item}}</ol>
+        <ol><a href="http://localhost:8080/azure_vue">aaaaaa</a> </ol>
+    </ul>
+
+</div>
+<script>
+    new Vue({
+        el:"#as",
+
+        data:{
+            w1:"aaa",
+            w2:"bbb",
+            w3:['2','2','3'],
+            list:[],
+            inputword:""
+
+        },
+
+        methods :{
+            handaaa : function () {
+                this.w1="world";
+
+            },
+            inputlist:function () {
+                this.list.push(this.inputword);
+                this.inputword=""
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

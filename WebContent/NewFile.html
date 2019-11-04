@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./vue.js"></script>
+</head>
+<body>
+<script>
+
+    axios.get('/azure_vue/font',{
+
+    }).then(function(res){
+        console.log(res);//处理成功的函数 相当于success
+    }).catch(function(error){
+        console.log(error)//错误处理 相当于error
+    })
+
+
+
+
+
+</script>
+</body>
+</html>
