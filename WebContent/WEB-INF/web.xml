@@ -19,4 +19,18 @@
  <servlet-name>Azure_Token</servlet-name>
  <url-pattern>/font</url-pattern>
  </servlet-mapping>
+ 
+ 
+ 
+ 
+ <servlet>
+ <servlet-name>testheader</servlet-name>
+ <servlet-class>azure.testservlet</servlet-class>
+ </servlet>
+ 
+ <servlet-mapping>
+ <servlet-name>testheader</servlet-name>
+ <url-pattern>/header</url-pattern>
+ </servlet-mapping>
+ 
 </web-app>

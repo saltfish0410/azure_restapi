@@ -28,23 +28,12 @@ public class token_servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	public  String token=getAccessToken("5b7637fb-c8fc-4380-9101-1cce8924f18a","cfe42308-6f2c-401d-ab95-089f1fd6a19f","etgfA4TS=WbJ4hu3wKqzQWcK_mZ=Bs-6");
 
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-	
 
-
-    public token_servlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		System.out.println("----------------------------------------------------------------------------------------------");
+		System.out.println("----------------------------------------------------------------------------------------------");
+    	
 		System.out.println("token :");
 		System.out.println(token);
 		System.out.println("response json :");
@@ -58,17 +47,19 @@ public class token_servlet extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		System.out.println("----------------------------------------------------------------------------------------------");
+		System.out.println("----------------------------------------------------------------------------------------------");
+    	
 	}
+	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+
 	private String send_get(String rest_url) throws Exception {
+		
+		
 		URL url = new URL(rest_url);
 		HttpURLConnection conn = (HttpURLConnection)url.openConnection();
 		conn.setRequestProperty("Authorization", "Bearer "+token);
